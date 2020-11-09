@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+  nifi1:
+    build: 
+      dockerfile: ./Dockerfile
+      context: .
+    image: marcusprojuris/nifi12
+    container_name: nifi01
+    ports:
+      - "8080:8080"
+    networks: 
+      - production-network
+  
+  
+
+networks: 
+  production-network:
+    driver: bridge
