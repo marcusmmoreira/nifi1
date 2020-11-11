@@ -13,12 +13,10 @@ ENV NIFI_HOME = /nifi-1.12.1
 ENV NIFI_CONF = /nifi-1.12.1/conf
 ENV NIFI_LOG = /nifi-1.12.1/logs
 ENV URLSERVIDORPROJURIS=http://macbook-pro-de-marcus.local:80
-ADD sh/ ${NIFI_BASE_DIR}/scripts/
-RUN chmod -R +x ${NIFI_BASE_DIR}/scripts/*.sh
+
 LABEL Description="Nifi12"
 
 WORKDIR /nifi-1.12.1/bin/
 
-ENTRYPOINT [ "service","nifi","start" ] && [ "wait","60000" ]
 
 EXPOSE 8080
