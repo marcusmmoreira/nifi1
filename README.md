@@ -15,7 +15,7 @@ db.produtos.remove({"_id": ObjectId("5fab6c9c73df1bbfb2d2db26")})
 
 docker run -it --net=bridge --name meu-nifi1 -p 8080:8080 -v /Desktop/projeto/docker/nificonf/:/nifi-1.12.1/conf/ marcusprojuris/nifi:1.0
 
-docker run -it --net=bridge --name meu-nifi1 -p 8080:8080 -v /Users/marcusdemelomoreira/Desktop/projeto/docker/confgit/nifi1/Conf:/nifi-1.12.1/conf/ marcusprojuris/nifi:1.0 
+docker run -it --net=bridge --name meu-nifi1 -p 8080:8080 -p 80:80 -v /Users/marcusdemelomoreira/Desktop/projeto/docker/confgit/nifi1/Conf:/nifi-1.12.1/conf/ marcusprojuris/nifi:1.0 
 
 docker run -it --name meu-nifi1 -p 8080:8080 -v "\projeto\nifi1\Conf":/nifi-1.12.1/conf/ marcusprojuris/nifi:1.0
 
